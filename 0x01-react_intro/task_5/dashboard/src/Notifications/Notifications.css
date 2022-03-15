@@ -1,18 +1,19 @@
-div {
-	margin: 1.5rem;
-	padding: 1rem;
-}
+:root {
+    --color-blue: blue;
+    --color-red: red;
+  }
 
 .Notifications {
-	border: 1px red dashed;
-	padding: 1rem;
-	margin: 0;
+  border: 1px dashed #E0434C;
+  margin: 1rem;
+  padding: 1rem;
+}
+ul li[data-priority='default'] {
+  color: var(--color-blue);
+  margin-left: 1.5rem;
 }
 
-li[data-priority="default"] {
-	color: blue;
-}
-
-li[data-priority="urgent"] {
-	color: red;
+ul li[data-priority='urgent'] {
+  color: var(--color-red);
+  margin-left: 1.5rem;
 }

@@ -1,26 +1,37 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: './src/index.js',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 100000,
+    maxAssetSize: 100000
+  },
   output: {
-    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
+    path: path.resolve('./dist'),
   },
+  devtool: 'inline-source-map',
   devServer: {
-    static: path.resolve(__dirname, '../dist'),
-    hot: true,
     compress: true,
+    static: [ "dist" ],
+    port: 8564,
+    hot: true,
   },
-  devtool: "inline-source-map",
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [  'style-loader', 'css-loader' ],
+        test: /\.js|\.jsx$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           'file-loader',
           {
@@ -32,16 +43,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
-      }
     ],
-  }
+  },
 };

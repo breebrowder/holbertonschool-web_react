@@ -1,63 +1,64 @@
-*{
-	--red: #e11d3f;
-	--img-size: 20rem;
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-	box-sizing: border-box;
+.App {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
-body {
-	font-family: 'Verdana';
-	margin: 2rem;
-}
-
-p {
-	font-size: 1.6rem;
-}
-
-h1 {
-	font-size: 3.5rem;
-}
-
 .App-header {
-	display: flex;
-	align-items: center;
-	color: var(--red);
-	border-bottom: 3px var(--red) solid;
+  border-bottom: 3px solid #E0434C;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 100%;
 }
-
 .App-header img {
-	height: var(--img-size);
-	width: var(--img-size);
+  width: 180px;
+  height: 180px;
 }
-
 .App-header h1 {
-	display: inline;
+  color: #E0434C;
+  font-weight: 600;
+  font-size: 2rem;
 }
-
 .App-body {
-	margin-left: 5rem;
-	margin-top: 5rem;
+  margin-top: 4rem;
+  height: calc(100vh - 26rem);
 }
-
+.App-body p {
+  margin: 0.5rem 3rem;
+}
+.App-body label:first-of-type {
+  margin: 0.5rem 3rem;
+  padding: 0rem;
+}
+.App-body label {
+  font-weight: 600;
+}
 .App-body input {
-	margin: 1rem;
+  margin: 1rem;
+  padding: .2rem 0;
 }
-
+.App-body button {
+  padding: .2rem .5rem;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.568);
+  border-radius: 4px;
+  border-color:  #b6b6b6;
+}
+.App-body button:hover {
+  background: #e7e7e7;
+}
 .App-footer {
-	border-top: 3px var(--red) solid;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-.App-footer p {
-	text-align: center;
-	font-style: italic;
+  border-top: 3px solid #E0434C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  height: 80px;
+  width: 100%;
 }

@@ -1,23 +1,19 @@
-import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
-import { assert } from 'chai';
+import { getLatestNotification, getFullYear, getFooterCopy } from './utils'
 
-describe('Basic tests for utils', () => {
-
-  it('Verify that correct year is returned', () => {
-    assert.equal(getFullYear(), 2022);
+describe('Test Utils.js Functions:', () => {
+  it('1. getFullYear', (done) => {
+    expect(getFullYear()).toBe(new Date().getFullYear());
+    done();
   });
 
-  it('Verify function statement is true', () => {
-    assert.equal(getFooterCopy(1), 'Holberton School');
+  it('2. getFooterCopy', (done) => {
+    expect(getFooterCopy(true)).toBe('Holberton School');
+    expect(getFooterCopy(false)).toBe('Holberton School main dashboard');
+    done();
   });
 
-  it('Verify function statement is false', () => {
-    assert.equal(getFooterCopy(0), 'Holberton School main dashboard');
+  it('3. getLatestNotification', (done) => {
+    expect(getLatestNotification()).toBe('<strong>Urgent requirement</strong> - complete by EOD');
+    done();
   });
-
-  it('Verify the return string is correct', () => {
-    assert.equal(getLatestNotification(), '<strong>Urgent requirement</strong> - complete by EOD'
-    );
-  });
-
 });

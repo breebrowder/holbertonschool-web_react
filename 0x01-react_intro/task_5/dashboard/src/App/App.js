@@ -1,28 +1,34 @@
 import React from 'react';
-import './App.css';
-import logo from '../assets/holberton-logo.jpg';
+import logo from '../assets/Holberton_logo.jpg';
 import { getFullYear, getFooterCopy } from '../utils/utils';
+import './App.css';
 
-export default function App() {
+
+function App() {
   return (
-    <>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <h1>School dashboard</h1>
-      </header>
-      <body className='App-body'>
+    <div className="App">
+
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>
+          School dashboard
+        </h1>
+      </div>
+
+      <div className="App-body">
         <p>Login to access the full dashboard</p>
-        <label>Email:
-          <input type='email' placeholder='Email' />
-        </label>
-        <label>Password:
-          <input type='password' placeholder='Password' />
-        </label>
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email"/>
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password"/>
         <button>OK</button>
-      </body>
-      <footer className='App-footer'>
-        <p>Copyright {getFullYear()} - {getFooterCopy(0)}</p>
-      </footer>
-    </>
+      </div>
+
+      <div className="App-footer">
+        <p>Copyright {getFullYear()} - {getFooterCopy(true)}</p>
+      </div>
+    </div>
   );
 }
+
+export default App;

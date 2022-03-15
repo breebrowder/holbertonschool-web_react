@@ -1,29 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, configure } from 'enzyme';
 import App from './App';
-import { shallow } from "enzyme";
-import { assert } from 'chai';
+import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+import "../../config/setupTests"
 
-describe('Basic tests for app', () => {
 
-  it('Verify that App renders without crashing', () => {
-    shallow(<App />);
+describe('Enzyme - Testing App.js Functions:', () => {
+  it('1. App running sucessfully without crashing ', (done) => {
+    expect(shallow(<App />).exists());
+    done();
   });
 
-  test("Verify App-header exists", () => {
+  it('2. verify App-header', (done) => {
     const wrapper = shallow(<App />);
-    const appWrapper = wrapper.find('.App-header');
-    assert.equal(appWrapper.length, 1);
+    expect(wrapper.contains(<header className='App-header' />))
+    done()
   });
 
-  test("Verify App-body exists", () => {
+  it('3. verify App-body', (done) => {
     const wrapper = shallow(<App />);
-    const appWrapper = wrapper.find('.App-body');
-    assert.equal(appWrapper.length, 1);
+    expect(wrapper.contains(<body className='App-body' />))
+    done();
   });
 
-  test("Verify App-footer exists", () => {
+  it('4. verify App-footer', (done) => {
     const wrapper = shallow(<App />);
-    assert.equal(wrapper.find('.App-footer').length, 1);
+    expect(wrapper.contains(<footer className='App-footer' />))
+    done();
   });
 });

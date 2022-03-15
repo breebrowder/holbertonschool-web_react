@@ -1,24 +1,26 @@
-import React from 'react';
-import Notifications from './Notifications';
 import { shallow } from 'enzyme';
-import { assert } from 'chai';
+import Notification from './Notifications';
+import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+import "../../config/setupTests"
 
-describe('Basic tests for notifications', () => {
 
-  it('Verify that Notifications renders without crashing', () => {
-    shallow(<Notifications />);
+describe('Enzyme - Testing Notification.js Functions:', () => {
+  it('1. Notification running without crashing', () => {
+    const wrapper = shallow(<Notification />);
+    expect(wrapper.exists()).toEqual(true);
   });
 
-  it('Verify Notifications renders 3 list items', () => {
-    const wrapper = shallow(<Notifications />);
-    const notifWrapper = wrapper.find('li');
-    assert.equal(notifWrapper.length, 3);
+  it('2. renders 3 list items', () => {
+    const wrapper = shallow(<Notification />);
+    wrapper.update();
+    expect(wrapper.find("li")).toHaveLength(3);
   });
 
-  it('Verify Notifications renders correct text', () => {
-    const wrapper = shallow(<Notifications />);
-    const notifWrapper = wrapper.find('p');
-    expect(notifWrapper.text()).toEqual('Here is the list of notifications');
+  it('3. renders the text "Here is the list of notifications"', () => {
+    const text = "Here is the list of notifications";
+    const wrapper = shallow(<Notification />);
+    wrapper.update();
+    expect(wrapper.find(".Notifications p").text()).toEqual(text);
   });
-
 });
