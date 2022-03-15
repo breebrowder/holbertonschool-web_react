@@ -1,0 +1,17 @@
+.Notifications {
+    border: 2px dashed #DF344B;
+    padding: auto;
+}
+
+#button-img {
+    height: 10px;
+    width: 10px;
+}
+
+#default {
+    color: blue;
+}
+
+.urgent {
+    color: red;
+}

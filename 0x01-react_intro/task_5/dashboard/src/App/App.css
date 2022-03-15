@@ -1,0 +1,63 @@
+*{
+	--red: #e11d3f;
+	--img-size: 20rem;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Verdana';
+	margin: 2rem;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+.App-header {
+	display: flex;
+	align-items: center;
+	color: var(--red);
+	border-bottom: 3px var(--red) solid;
+}
+
+.App-header img {
+	height: var(--img-size);
+	width: var(--img-size);
+}
+
+.App-header h1 {
+	display: inline;
+}
+
+.App-body {
+	margin-left: 5rem;
+	margin-top: 5rem;
+}
+
+.App-body input {
+	margin: 1rem;
+}
+
+.App-footer {
+	border-top: 3px var(--red) solid;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.App-footer p {
+	text-align: center;
+	font-style: italic;
+}
