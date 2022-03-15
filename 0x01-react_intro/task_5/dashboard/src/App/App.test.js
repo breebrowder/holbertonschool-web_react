@@ -4,7 +4,7 @@ import App from './App';
 import { shallow } from "enzyme";
 import { assert } from 'chai';
 
-describe('Baisc tests for app', () => {
+describe('Basic tests for app', () => {
 
   it('Verify that App renders without crashing', () => {
     shallow(<App />);
