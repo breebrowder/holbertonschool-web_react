@@ -1,43 +1,38 @@
 {
   "name": "dashboard",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode production --config config/webpack.config.js",
-    "start": "webpack serve --open --mode development --config config/webpack.config.js",
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.17.2",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@testing-library/jest-dom": "^5.16.2",
-    "babel-loader": "^8.2.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.1",
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.6.0",
-    "file-loader": "^6.2.0",
-    "image-webpack-loader": "^8.1.0",
-    "inline-source-map": "^0.6.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "style-loader": "^3.3.1"
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0",
+    "web-vitals": "^2.1.4"
   },
-  "jest": {
-    "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
-    }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
