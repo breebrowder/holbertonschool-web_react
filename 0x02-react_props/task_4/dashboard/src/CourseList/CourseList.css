@@ -1,0 +1,15 @@
+.wrapper {
+  height: calc(100vh - 26rem);
+}
+.coursecontainer {
+    border: 1px solid rgb(199, 199, 199);
+    margin: 50px auto;
+    width: 75%;
+  }
+.coursecontainer th {
+  padding: .4rem 0;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+.coursecontainer tr:nth-of-type(2) {
+  text-align: left;
+}
