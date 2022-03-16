@@ -5,7 +5,8 @@
 1. [Webpack](https://intranet.hbtn.io/projects/1754)
 2. [React intro](https://intranet.hbtn.io/projects/1755)
 3. [React props](https://intranet.hbtn.io/projects/1756)
-4. [TypeScript](https://intranet.hbtn.io/projects/1673)
+4. [React Component](https://intranet.hbtn.io/projects/1757)
+5. [TypeScript](https://intranet.hbtn.io/projects/1673)
 
 
 ## About the Developer  💬
