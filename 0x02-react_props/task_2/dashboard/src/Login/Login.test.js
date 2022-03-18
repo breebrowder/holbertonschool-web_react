@@ -6,17 +6,17 @@ import Adapter from 'enzyme-adapter-react-16';
 import "../../config/setupTests"
 
 describe('Testing Login.js functions:', () => {
-  it('1. Login running without crashing', (done) => {
+  it('Login running without crashing', (done) => {
     expect(shallow(<Login />).exists());
     done();
   });
-  
-  it("2. verify 2 input tags", () => {
+
+  it("verify 2 input tags", () => {
     const wrapper = shallow(<Login />);
     expect(wrapper.find("div.App-body input")).toHaveLength(2);
   });
 
-  it("3. verify 2 label tags", () => {
+  it("verify 2 label tags", () => {
     const wrapper = shallow(<Login />);
     expect(wrapper.find("div.App-body label")).toHaveLength(2);
   });

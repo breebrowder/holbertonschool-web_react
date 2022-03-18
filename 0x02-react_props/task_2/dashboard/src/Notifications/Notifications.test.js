@@ -6,17 +6,17 @@ import "../../config/setupTests"
 
 
 describe('Enzyme - Testing Notification.js Functions:', () => {
-  it('1. Notification running without crashing', () => {
+  it('Notification running without crashing', () => {
     const wrapper = shallow(<Notifications />);
     expect(wrapper.exists()).toEqual(true);
   });
 
-  it("2. Checks the text 'Here is the list of Notifications'", () => {
+  it("Checks the text 'Here is the list of Notifications'", () => {
     const wrapper = shallow(<Notifications />);
     expect(wrapper.find(".Notifications p").text()).toEqual("Here is the list of notifications");
   });
 
-  it("3. Checks Item and correct html components", () => {
+  it("Checks Item and correct html components", () => {
     const wrapper = shallow(<Notifications />);
     expect(wrapper.find("NotificationItem")).toBeDefined();
     expect(wrapper.find("NotificationItem").first().html()).toEqual('<li data-notification-type="default">New course available</li>');
