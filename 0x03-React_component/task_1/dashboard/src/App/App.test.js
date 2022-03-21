@@ -1,4 +1,6 @@
 import React from "react";
+import { jest } from '@jest/globals'
+import { shallow } from '../../config/setupTests';
 import { shallow } from "enzyme";
 import App from "./App";
 import Login from '../Login/Login';
