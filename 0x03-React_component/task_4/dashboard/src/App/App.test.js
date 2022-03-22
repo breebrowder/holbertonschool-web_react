@@ -1,5 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import { shallow } from '../../config/setupTests';
 import { shallow } from "enzyme";
 import App from "./App";
 import Login from '../Login/Login';
@@ -11,18 +14,18 @@ describe("Test App.js Functions: ", () => {
     expect(wrapper.exists()).toEqual(true);
   });
 
-  it('Verify CourseList is displayed when isLoggedIn is false', () => {
+  it('Verify if CourseList is displayed when isLoggedIn is false', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find(CourseList)).toHaveLength(0);
   });
 
-  it('Verify CourseList is displayed when isLoggedIn is true', () => {
+  it('Verify if CourseList is displayed when isLoggedIn is false', () => {
     const wrapper = shallow(<App isLoggedIn={true} />);
     expect(wrapper.find(CourseList)).toHaveLength(1);
     expect(wrapper.find(Login)).toHaveLength(0);
   });
 
-  it('Verify that when the keys "control" and "h" are pressed the logOut function', () => {
+  it('verify that when the keys "control" and "h" are pressed the logOut function', () => {
     const logOut = jest.fn(() => undefined);
     const wrapper = shallow(<App logOut={logOut} />);
     const alert = jest.spyOn(global, 'alert');
