@@ -20,7 +20,7 @@ const imageStyle = {
 }
 
 class Notifications extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.markAsRead = this.markAsRead.bind(this)
   }
@@ -35,11 +35,11 @@ class Notifications extends React.Component {
     )
   }
 
-  render() {
+  render () {
     return (
       <>
         <div className="menuItem">Your notifications</div>
-        {this.props.displayDrawer ?
+        { this.props.displayDrawer ?
           (<div className="Notifications">
             <button aria-label="Close" style={buttonStyle}
               onClick={() => console.log("Close button has been clicked")}>
@@ -48,7 +48,7 @@ class Notifications extends React.Component {
             <p>Here is the list of notifications</p>
             <ul>
               {this.props.listNotifications.length === 0 ? (<NotificationItem value='No new notification for now' type='no-new' />) : <></>}
-              {this.props.listNotifications.map((not) => (<NotificationItem key={not.id} type={not.type} value={not.value} html={not.html} markAsRead={() => { this.markAsRead(not.id) }} />))}
+              {this.props.listNotifications.map((not) => (<NotificationItem key={not.id} type={not.type} value={not.value} html={not.html} markAsRead={() => {this.markAsRead(not.id)}} />))}
             </ul>
           </div>)
           : <></>

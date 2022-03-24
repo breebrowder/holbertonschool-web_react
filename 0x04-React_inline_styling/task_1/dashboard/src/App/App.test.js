@@ -24,7 +24,7 @@ describe("Test App.js Functions: ", () => {
     expect(wrapper.find(Login)).toHaveLength(0);
   });
 
-  it('Verify that when the keys "control" and "h" are pressed the logOut function', () => {
+  it('verify that when the keys "control" and "h" are pressed the logOut function', () => {
     const logOut = jest.fn(() => undefined);
     const wrapper = shallow(<App logOut={logOut} />);
     const alert = jest.spyOn(global, 'alert');

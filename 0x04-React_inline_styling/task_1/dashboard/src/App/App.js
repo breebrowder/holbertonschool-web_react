@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { css, StyleSheet } from 'aphrodite';
 import Login from '../Login/Login';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Notifications from '../Notifications/Notifications';
 import CourseList from '../CourseList/CourseList';
-import './App.css';
 import { PropTypes, bool } from 'prop-types';
 import { getLatestNotification } from "../utils/utils";
 import BodySection from "../BodySection/BodySection";
@@ -22,6 +22,23 @@ const listNotifications = [
   {id: 2, type: 'urgent', value: 'New resume available'},
   {id: 3, type: 'urgent', html: { __html: getLatestNotification() }}
 ]
+
+const styles = StyleSheet.create({
+  body: {
+    backgroundColor: '#fff',
+    padding: '3rem',
+    minHeight: '25rem',
+  },
+  footer: {
+    backgroundColor: '#fff',
+    textAlign: 'center',
+    width: '100%',
+    bottom: '0px',
+    borderTop: '3px solid #E0434C',
+    fontStyle: 'italic',
+    padding: '1rem 0'
+  }
+})
 
 class App extends Component {
   constructor(props) {
@@ -45,10 +62,10 @@ class App extends Component {
     return(
     <>
       <Notifications listNotifications={listNotifications}/>
-      <div className="App">
+      <div className='App'>
         <Header />
       </div>
-      <div className="App-body">
+      <div className={css(styles.body)}>
         {!this.props.isLoggedIn ?
           <BodySectionWithMarginBottom title="Log in to continue">
             <Login />
@@ -61,7 +78,7 @@ class App extends Component {
           <p>New News</p>
         </BodySection>
       </div>
-      <div className="App-footer">
+      <div className={css(styles.footer)}>
         <Footer />
       </div>
     </>

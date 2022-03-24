@@ -3,7 +3,9 @@ import React from "react";
 import Notifications from "./Notifications";
 import { getLatestNotification } from "../utils/utils";
 import NotificationItem from './NotificationItem'
+import { StyleSheetTestUtils } from 'aphrodite';
 
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe("Testing Notifications.js fucntions:", () => {
   const listNotifications = [
@@ -31,7 +33,6 @@ describe("Testing Notifications.js fucntions:", () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />);
     expect(wrapper.find("div.menuItem")).toHaveLength(1);
   });
-
   it("Notification block is displayed when displayDrawer is true", () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />);
     expect(wrapper.find("div.Notifications")).toHaveLength(1);
@@ -47,13 +48,6 @@ describe("Testing Notifications.js fucntions:", () => {
       `Notification ${id} has been marked as read`
     );
     jest.restoreAllMocks();
-  });
-
-  it('Checks it does not rerender with the same props', () => {
-    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
-    const shouldComponentUpdate = jest.spyOn(Notifications.prototype, 'shouldComponentUpdate');
-    expect(shouldComponentUpdate).toHaveBeenCalled();
-    expect(shouldComponentUpdate).toHaveLastReturnedWith(false);
   });
 
   it('Checks props of the component with a longer list, the component does rerender', () => {

@@ -12,7 +12,7 @@ describe("Testing Notifications.js fucntions:", () => {
     { id: 3, type: 'urgent', html: { __html: getLatestNotification() } }
   ];
 
-  it("Notifications running without crashing", () => {
+  it("1. Notifications running without crashing", () => {
     const wrapper = shallow(<Notifications />);
     expect(wrapper.exists()).toEqual(true);
   });

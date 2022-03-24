@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   let cell;
-  const style = { 
+  const style = {
     headerStyle: { backgroundColor: '#deb5b545' },
     bodyStyle: { backgroundColor: '#f5f5f5ab' },
   };
