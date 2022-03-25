@@ -1,0 +1,54 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production --config config/webpack.config.js",
+    "start": "webpack serve --open --mode development --config config/webpack.config.js",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.2",
+    "babel-loader": "^8.2.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "global-jsdom": "^8.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jsdom": "19.0.0",
+    "jsdom-global": "3.0.2",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "aphrodite": "^2.4.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "inline-source-map": "^0.6.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "style-loader": "^3.3.1"
+  },
+  "jest": {
+    "verbose": true,
+    "clearMocks": true,
+    "setupFiles": [
+      "<rootDir>/config/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|sass)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  }
+}
