@@ -4,11 +4,14 @@
 
 1. [Webpack](https://intranet.hbtn.io/projects/1754)
 2. [React State](https://intranet.hbtn.io/projects/1759)
-3. [React intro](https://intranet.hbtn.io/projects/1755)
-4. [React props](https://intranet.hbtn.io/projects/1756)
-5. [React Component](https://intranet.hbtn.io/projects/1757)
-6. [React Inline Styling](https://intranet.hbtn.io/projects/1758)
-7. [TypeScript](https://intranet.hbtn.io/projects/1673)
+3. [React Immutable](https://intranet.hbtn.io/projects/1760)
+4. [React intro](https://intranet.hbtn.io/projects/1755)
+5. [React props](https://intranet.hbtn.io/projects/1756)
+6. [React Redux action creator+normalizr](https://intranet.hbtn.io/projects/1761)
+7. [React Component](https://intranet.hbtn.io/projects/1757)
+8. [React Redux reducer+selector](https://intranet.hbtn.io/projects/1762)
+9. [React Inline Styling](https://intranet.hbtn.io/projects/1758)
+10. [TypeScript](https://intranet.hbtn.io/projects/1673)
 
 
 ## About the Developer  💬
