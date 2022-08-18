@@ -24,7 +24,7 @@ Bree is known for her creativity, organization, and self awareness. Advances in 
 
 - 📁 [LinkedIn](https://www.linkedin.com/in/breebrowder/)
 - ✍️ [Medium](https://medium.com/@breebrowder)
-- 🖥️ [Portfolio Website](https://breebrowder.github.io)
+- 🖥️ [Portfolio Website](https://www.breebrowder.com/)
 
 ### Email Me
 📩: browder.bree@gmail.com
